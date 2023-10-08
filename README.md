@@ -1,10 +1,11 @@
 # Shell Scripting
+___
 Shell scripting is a way of automating and scripting tasks on a Unix or Unix-like operating system, such as Linux or macOS, using shell commands and scripting constructs. A shell script is a series of commands and instructions written in a plain text file, which can be executed by the system's shell interpreter. The shell interpreter reads and executes the commands in the script one by one, allowing you to automate repetitive tasks, perform system administration and more.
 
 Note that for you to run a script, you have the give the file executable permissions using the command shown below:
 
 ```bash
-chmod u+x <filename>
+chmod +x <filename>
 ```
 
 ## Shell Scripting Syntax Elements
@@ -202,7 +203,7 @@ ls
 
 
 ## File Operations and Sorting
-Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This scripts creates three files (file1.txt, file2.txt and file3.txt), displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the sorted_files_sorted_alphabetically.txt and finally displays the contents of the final sorted file.
+Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This scripts creates three files *(file1.txt, file2.txt and file3.txt)*, displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the sorted_files_sorted_alphabetically.txt and finally displays the contents of the final sorted file.
 
 Lets proceed using the steps below:
 
@@ -261,7 +262,7 @@ sudo chmod +x sorting.sh
 ```
 
 ## Working With Numbers and Calculations
-This script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations (addition, subtraction, multiplication, division and modulus) and displays the results. It also performs more complex calculations such as raising num1 to the power of 2 and calculating the square root of num2 and displays those results as well.
+This script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations *(addition, subtraction, multiplication, division and modulus)* and displays the results. It also performs more complex calculations such as raising num1 to the power of 2 and calculating the square root of num2 and displays those results as well.
 
 Lets proceed by following the steps below:
 **Step 1**: On your terminal, create a file called calculations.sh using the command below:
@@ -323,9 +324,9 @@ This script defines the source directory paths. It then creates a timestamp usin
 
 Finally, it displays a message indicating the completion of the backup process and shows the path of the backup directory with the timestamp.
 
-Lets proceed using the steps below:
+Proceed by following the steps below:
 
-**Step 1**: On your terminal, create a file *backup.sh* using the command below:
+**Step 1**: On your terminal, create a file *backup.sh* using the command shown below:
 
 ```bash
 vi backup.sh
