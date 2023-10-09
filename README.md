@@ -10,7 +10,7 @@ sudo chmod +x <filename>
 
 ## Shell Scripting Syntax Elements
 ## 1. Variables
-Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variables using the `=` operator and access their values using the variable name preceded bu a `$` sign. 
+Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variables using the `=` operator and access their values using the variable name preceded by a `$` sign. 
 
 ### Assigning value to a variable.
 
@@ -112,7 +112,7 @@ sudo chmod +x test2.sh
 
 ![chmod test2](./images/2.%20chmod%20test2.png)
 
-* Run the following command in order to open the script.
+* Run the following command in order to open the script:
 
 ```bash
 vi test2.sh
@@ -175,7 +175,9 @@ echo $current_date
 
 
 ## 4. Input and Output
- Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. Additionally, you can redirect input and output using operators like `>` *(output to a file)*, `<` *(input from a file)* and `|` *(pipe the output of one command as input to another)*.
+Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. 
+
+Additionally, you can redirect input and output using operators like `>` *(output to a file)*, `<` *(input from a file)* and `|` *(pipe the output of one command as input to another)*.
 
 * Accept user input.
 
@@ -237,7 +239,7 @@ sudo chmod +x function.sh
 
 ![chmod function](./images/5.%20chmod%20function.png)
 
-* Run the following command to open the file.
+* Run the following command to open the file:
 
 ```bash
 vi function.sh
@@ -258,7 +260,7 @@ greet "John"
 
 ![function script](./images/5.%20function%20script.png)
 
-* Run the script using the command below:
+* Run the script using the command shown below:
 
 ```bash
 ./ function.sh
@@ -267,7 +269,9 @@ greet "John"
 ![function.sh](./images/5.%20:function.png)
 
 ## Writing Your First Shell Script
-**Step 1**: On your terminal, create and open a folder named `shell-scripting` using the commands shown below:
+
+### Step 1 
+On your terminal, create and open a folder named `shell-scripting` using the commands shown below:
 
 ```bash
 mkdir shell-scripting
@@ -283,7 +287,8 @@ cd shell-scripting
 
 This will hold all the script we will write.
 
-**Step 2**: Create a filed named `user-input.sh` using the command shown below:
+### Step 2
+Create a file named `user-input.sh` using the command shown below:
 
 ```bash
 touch user-input.sh
@@ -291,7 +296,8 @@ touch user-input.sh
 
 ![touch user-input](./images/6.%20touch%20user-input.png)
 
-**Step 3**: Use the `vi user-input.sh` command to open the  file then copy and paste the block of code below:
+### Step 3
+Use the `vi user-input.sh` command to open the file then copy and paste the block of code below:
 
 ```bash
 #!/bin/bash
@@ -308,9 +314,11 @@ echo "Hello, $name! Nice to meet you."
 
 A summary of the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
 
-**Step 4**: Save your file using the `esc` key and `:wq!`.
+### Step 4
+Save the file using the `esc` key and `:wq!`.
 
-**Step 5**: Run the command below to make the file executable.
+### Step 5
+Run the command below to make the file executable.
 
 ```bash
 sudo chmod +x user-input.sh
@@ -318,7 +326,8 @@ sudo chmod +x user-input.sh
 
 ![chmod user-input](./images/6.%20chmod%20user-input.png)
 
-**Step 6**: Run the script using the command shown below:
+### Step 6
+Run the script using the command shown below:
 
  ```bash
  ./user-input.sh
@@ -331,13 +340,15 @@ We will be writing a simple shell script as a way of practicing what we learnt. 
 
 Proceed by following the steps below:
 
-**Step 1**: Create and a file named `navigating-linux-filesystem.sh` using the following command:
+### Step 1
+Create and a file named `navigating-linux-filesystem.sh` using the following command:
 
 ```bash
 vi navigating-linux-filesystem.sh
 ```
 
-**Step 2**: Paste the code block below into the file.
+### Step 2
+Paste the code block below into the file.
 
 ```bash
 #!/bin/bash
@@ -382,7 +393,8 @@ ls
 
 ![navigating linux filesystem script](./images/7.%20navigating%20linux%20filesystem%20script.png)
 
-**Step 3**: Run the command below to give executable permission on the file.
+### Step 3
+Run the command below to give executable permission on the file.
 
 ```bash
 sudo chmod +x navigating-linux-filesystem.sh
@@ -390,7 +402,8 @@ sudo chmod +x navigating-linux-filesystem.sh
 
 ![chmod navigating-linux-filesystem](./images/7.%20chmod%20navigating%20linux%20filesystem.png)
 
-**Step 4**: Run your script using the command below:
+### Step 4
+Run your script using the command shown below:
 
  ```bash
 ./navigating-linux-filesystem.sh
@@ -403,13 +416,15 @@ Here, we will be writing a simple shell that focuses on *File Operations and Sor
 
 Lets proceed using the steps below:
 
-**Step 1**: Open your terminal and create a file named `sorting.sh` using the command shown below:
+### Step 1
+Open your terminal and create a file named `sorting.sh` using the command shown below:
 
 ```bash
 vi sorting.sh
 ```
 
-**Step 2**: Copy and paste the code block below into the file.
+### Step 2
+Copy and paste the code block below into the file.
 
 ```bash
 #!/bin/bash
@@ -451,7 +466,8 @@ cat sorted_files_sorted_alphabetically.txt
 
 ![sorting script](./images/8.%20sorting%20script.png)
 
-**Step 3**: Set execute permission on *sorting.sh* using the command shown below.
+### Step 3
+Set execute permission on *sorting.sh* using the command shown below:
 
 ```bash
 sudo chmod +x sorting.sh
@@ -459,7 +475,8 @@ sudo chmod +x sorting.sh
 
 ![chmod sorting](./images/8.%20chmod%20sorting.png)
 
-**Step 4**: Run your script using the command shown below:
+### Step 4
+Run the script using the command shown below:
 
 ```bash
 ./sorting.sh
@@ -470,13 +487,15 @@ sudo chmod +x sorting.sh
 This script defines two variables *num1* and *num2* with numeric values, performs basic arithmetic operations *(addition, subtraction, multiplication, division and modulus)* and displays the results. It also performs more complex calculations such as raising *num1* to the power of 2 and calculating the square root of *num2* and displays those results as well.
 
 Lets proceed by following the steps below:
-**Step 1**: On your terminal, create a file named `calculations.sh` using the command below:
+### Step 1
+On your terminal, create a file named `calculations.sh` using the command below:
 
 ```bash
 vi calculations.sh
 ```
 
-**Step 2**: Copy and paste the code block below into the file:
+### Step 2
+Copy and paste the code block below into the file:
 
 ```bash
 #!/bin/bash
@@ -512,7 +531,8 @@ echo "Square root of number 2: $square_root"
 
 ![claculations script](./images/9.%20calculations%20script.png)
 
-**Step 3**: Set execute permission on *calculations.sh* using the command shown below:
+### Step 3
+Set execute permission on *calculations.sh* using the command shown below:
 
 ```bash
 sudo chmod +x calculations.sh
@@ -520,7 +540,8 @@ sudo chmod +x calculations.sh
 
 ![chmod calculations](./images/9.%20chmod%20calculations.png)
 
-**Step 4**: Run your script using this command:
+### Step 4
+Run the script using the command shown below:
 
 ```bash
 ./calculations.sh
@@ -537,13 +558,15 @@ Finally, it displays a message indicating the completion of the backup process a
 
 Proceed by following the steps below:
 
-**Step 1**: On your terminal, create a file named `backup.sh` using the command shown below:
+### Step 1
+On your terminal, create a file named `backup.sh` using the command shown below:
 
 ```bash
 vi backup.sh
 ```
 
-**Step 2**: Copy and paste the code below into the file.
+### Step 2
+Copy and paste the code below into the file.
 
 ```bash
 #!/bin/bash
@@ -579,7 +602,8 @@ echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 
 ![backup script](./images/10.%20backup%20script.png)
 
-**Step 3**: Set execute permission on *backup.sh* using the command shown below:
+### Step 3
+Set execute permission on *backup.sh* using the command shown below:
 
 ```bash
 sudo chmod +x backup.sh
@@ -587,7 +611,8 @@ sudo chmod +x backup.sh
 
 ![chmod backup](./images/10.%20chmod%20backup.png)
 
-**Step 4**: Run your script using the command shown below:
+### Step 4
+Run the script using the command shown below:
 
 ```bash
 ./backup.sh
