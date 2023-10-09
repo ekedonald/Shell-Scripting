@@ -12,7 +12,7 @@ sudo chmod +x <filename>
 ## 1. Variables
 Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variables using the `=` operator and access their values using the variable name preceded by a `$` sign. 
 
-### Assigning value to a variable.
+### Assigning a value to a variable.
 
 ```bash
 name="John"
