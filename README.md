@@ -9,7 +9,7 @@ sudo chmod +x <filename>
 ```
 
 ## Shell Scripting Syntax Elements
-## 1. **Variables**
+## 1. Variables
 Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variables using the `=` operator and access their values using the variable name preceded bu a `$` sign. 
 
 ### Assigning value to a variable.
@@ -27,7 +27,7 @@ echo $name
 
 ![echo name](./images/1.%20echo%20name.png)
 
-## 2. **Control Flow**
+## 2. Control Flow
 Bash provides control flow statements like if-else, for loops, while loops and case statements to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists and execute different different commands based on conditions.
 
 ### Using if-else to execute script.
@@ -135,7 +135,7 @@ The result is shown below:
 
 ![test 2](./images/2.%20:test2.png)
 
-## 3. **Command Substitution**
+## 3. Command Substitution
  Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitition.
 
 ### Using backtick for command substitution.
@@ -174,7 +174,7 @@ echo $current_date
 ![echo current_date2](./images/3.%20echo%20current_date2.png)
 
 
-## 4. **Input and Output**
+## 4. Input and Output
  Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. Additionally, you can redirect input and output using operators like `>` *(output to a file)*, `<` *(input from a file)* and `|` *(pipe the output of one command as input to another)*.
 
 * Accept user input.
@@ -218,7 +218,7 @@ echo "hello world" | grep "world"
 
 ![echo hello world | grep world](./images/4.%20echo%20hello%20world%20grep%20world.png)
 
-## 5. **Functions**
+## 5. Functions
 Bash allows you to define and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
 
 * Create a file named `function.sh` using the following command:
@@ -306,7 +306,7 @@ echo "Hello, $name! Nice to meet you."
 
 ![user-input script](./images/6.%20user-input%20script.png)
 
-A little bit about the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
+A summary of the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
 
 **Step 4**: Save your file using the `esc` key and `:wq!`.
 
