@@ -19,7 +19,7 @@ name="John"
 ```
 ![name=John](./images/1.%20name=John.png)
 
-### Retrieving value from a variable.
+### Retrieving the value from a variable.
 
 ```bash
 echo $name
