@@ -56,7 +56,7 @@ vi control_flow.sh
 
 ![control flow](./images/1.%20vi%20control%20flow.png)
 
-* Copy and paste the code shown below into the file.
+* Copy and paste the code shown below into the file:
 
 ```bash
 #!/bin/bash
@@ -117,7 +117,7 @@ sudo chmod +x test2.sh
 ```bash
 vi test2.sh
 ```
-* Copy and paste the code shown below.
+* Copy and paste the code shown below:
 
 ```bash
 #!/bin/bash
@@ -138,7 +138,7 @@ The result is shown below:
 ## 3. Command Substitution
  Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitition.
 
-### Using backtick for command substitution.
+### Using backtick for command substitution
 
 * Run the following command to declare the variable for *current_date*:
 
@@ -156,7 +156,7 @@ echo $current_date
 
 ![echo current_date1](./images/3.%20echo%20current_date1.png)
 
-### Using `%()` syntax for command substitution.
+### Using `%()` syntax for command substitution
 
 * Run the following command to declare the variable for *current_date*:
 
@@ -244,7 +244,7 @@ sudo chmod +x function.sh
 ```bash
 vi function.sh
 ```
-* Copy and paste the code below into the file.
+* Copy and paste the code below into the file:
 
 ```bash
 #!/bin/bash
@@ -312,13 +312,13 @@ echo "Hello, $name! Nice to meet you."
 
 ![user-input script](./images/6.%20user-input%20script.png)
 
-A summary of the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
+**Summary of the code block**: The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
 
 ### Step 4
 Save the file using the `esc` key and `:wq!`.
 
 ### Step 5
-Run the command below to make the file executable.
+Run the command below to make the file executable:
 
 ```bash
 sudo chmod +x user-input.sh
@@ -348,7 +348,7 @@ vi navigating-linux-filesystem.sh
 ```
 
 ### Step 2
-Paste the code block below into the file.
+Paste the code block below into the file:
 
 ```bash
 #!/bin/bash
@@ -394,7 +394,7 @@ ls
 ![navigating linux filesystem script](./images/7.%20navigating%20linux%20filesystem%20script.png)
 
 ### Step 3
-Run the command below to give executable permission on the file.
+Run the command below to give executable permission on the file:
 
 ```bash
 sudo chmod +x navigating-linux-filesystem.sh
@@ -424,7 +424,7 @@ vi sorting.sh
 ```
 
 ### Step 2
-Copy and paste the code block below into the file.
+Copy and paste the code block below into the file:
 
 ```bash
 #!/bin/bash
@@ -566,7 +566,7 @@ vi backup.sh
 ```
 
 ### Step 2
-Copy and paste the code below into the file.
+Copy and paste the code below into the file:
 
 ```bash
 #!/bin/bash
