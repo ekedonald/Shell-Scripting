@@ -5,7 +5,7 @@ Shell scripting is a way of automating and scripting tasks on a Unix or Unix-lik
 Note that for you to run a script, you have the give the file executable permissions using the command shown below:
 
 ```bash
-chmod +x <filename>
+sudo chmod +x <filename>
 ```
 
 ## Shell Scripting Syntax Elements
@@ -71,10 +71,10 @@ current_date=`date +%Y-%m-%d`
 * Using `%()` syntax for command substitution.
 
 ```bash
-current_date=$(date +%Y-%m-%d)
+current_date=$(date +%Y-%d-%m)
 ```
 
-4. **Input and Output**: Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. Additionally, you can redirect input and output using operators like `>` (output to a file), `<` (input from a file) and `|` (pipe the output of one command as input to another).
+4. **Input and Output**: Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. Additionally, you can redirect input and output using operators like `>` *(output to a file)*, `<` *(input from a file)* and `|` *(pipe the output of one command as input to another)*.
 
 * Accept user input.
 
@@ -89,7 +89,7 @@ read name
 echo "Hello World"
 ```
 
-* Out the result of a command into a file.
+* Output the result of a command into a file.
 
 ```bash
 echo "hello world" > index.txt
@@ -98,13 +98,13 @@ echo "hello world" > index.txt
 * Pass the content of a file as input to a command.
 
 ```bash
-grep "pattern" < input.txt
+grep "hello" < index.txt
 ```
 
 * Pass the result of a command as input to another command.
 
 ```bash
-echo "hello world" | grep "pattern"
+echo "hello world" | grep "world"
 ```
 
 5. **Functions**: Bash allows you to define and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
@@ -122,9 +122,23 @@ greet "John"
 ```
 
 ## Writing Your First Shell Script
-**Step 1**: On your terminal, open a folder called *shell-scripting* using the command `mkdir shell-scripting`. This will hold all the script we will write in this lesson.
+**Step 1**: On your terminal, create and open a folder called *shell-scripting* using the commands shown below:
 
-**Step 2**: Create a filed called `user-input.sh` using the command `touch user-input.sh`
+```bash
+mkdir shell-scripting
+```
+
+```bash
+cd shell-scripting
+```
+
+* This will hold all the script we will write in this lesson.
+
+**Step 2**: Create a filed called `user-input.sh` using the command shown below:
+
+```bash
+touch user-input.sh
+```
 
 **Step 3**: Inside the file copy and paste the block of code below.
 
@@ -139,20 +153,24 @@ read name
 echo "Hello, $name! Nice to meet you."
 ```
 
-A little bit about the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter to be used to execute the script.
+A little bit about the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
 
-**Step 4**: Save your file.
+**Step 4**: Save your file using `shift zz` or `:wq!`.
 
 **Step 5**: Run the command `sudo chmod +x user-input.sh` this makes the file executable.
 
-**Step 6**: Run the script using the command `./user-input.sh`.
+**Step 6**: Run the script using the command `./user-input.sh`
 
 ## Directory Manipulation and Navigation
-We will be writing a simple shell script as a way of practicing what we learnt. This script will display the current directory, create a new directory called "my_directory", change to that directory, create two files inside it, list the files, move back one level up, remove the "my_directory" and its contents and finally list the files in the current directory again.
+We will be writing a simple shell script as a way of practicing what we learnt. This script will display the current directory, create a new directory called "*my_directory*", change to that directory, create two files inside it, list the files, move back one level up, remove the "*my_directory*" and its contents and finally list the files in the current directory again.
 
 Proceed by following the steps below:
 
-**Step 1**: Open a file named *navigating-linux-filesystem.sh*
+**Step 1**: Create and a file named *navigating-linux-filesystem.sh* using the following command:
+
+```bash
+vi navigating-linux-filesystem.sh
+```
 
 **Step 2**: Paste the code block below into your file.
 
@@ -197,17 +215,27 @@ echo "Files in the current directory:"
 ls
 ```
 
-**Step 3**: Run the command `sudo chmod +x navigating-linux-filesystem.sh` to execute permission on the file.
+**Step 3**: Run the command below to execute permission on the file. 
+```bash
+sudo chmod +x navigating-linux-filesystem.sh
+```
 
-**Step 4**: Run your script this command `./navigating-linux-filesystem.sh`
+**Step 4**: Run your script using the command below:
 
+ ```bash
+./navigating-linux-filesystem.sh
+```
 
 ## File Operations and Sorting
-Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This scripts creates three files *(file1.txt, file2.txt and file3.txt)*, displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the sorted_files_sorted_alphabetically.txt and finally displays the contents of the final sorted file.
+Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This scripts creates three files *(file1.txt, file2.txt and file3.txt)*, displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the *sorted_files_sorted_alphabetically.txt* and finally displays the contents of the final sorted file.
 
 Lets proceed using the steps below:
 
-**Step 1**: Open your terminal and create a file called *sorting.sh* using the command `touch sorting.sh`
+**Step 1**: Open your terminal and create a file called `sorting.sh` using the command shown below:
+
+```bash
+vi sorting.sh
+```
 
 **Step 2**: Copy and paste the code block below into the file.
 
@@ -249,7 +277,7 @@ echo "Final sorted file:"
 cat sorted_files_sorted_alphabetically.txt
 ```
 
-**Step 3**: Set execute permission on *sorting.sh* using the command below.
+**Step 3**: Set execute permission on *sorting.sh* using the command shown below.
 
 ```bash
 sudo chmod +x sorting.sh
@@ -262,13 +290,13 @@ sudo chmod +x sorting.sh
 ```
 
 ## Working With Numbers and Calculations
-This script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations *(addition, subtraction, multiplication, division and modulus)* and displays the results. It also performs more complex calculations such as raising num1 to the power of 2 and calculating the square root of num2 and displays those results as well.
+This script defines two variables *num1* and *num2* with numeric values, performs basic arithmetic operations *(addition, subtraction, multiplication, division and modulus)* and displays the results. It also performs more complex calculations such as raising *num1* to the power of 2 and calculating the square root of *num2* and displays those results as well.
 
 Lets proceed by following the steps below:
-**Step 1**: On your terminal, create a file called calculations.sh using the command below:
+**Step 1**: On your terminal, create a file called `calculations.sh` using the command below:
 
 ```bash
-touch calculations.sh
+vi calculations.sh
 ```
 
 **Step 2**: Copy and paste the code block below:
@@ -298,7 +326,7 @@ echo "Remainder: $remainder"
 
 # Perform some more complex calculations
 power_of_2=$((num1 ** 2))
-square_root=$(awk "BEGIN{ sqrt=$num2; print sqrt }")
+square_root=$(awk "BEGIN {print sqrt($num2)}")
 
 # Display the results
 echo "Number 1 raised to the power of 2: $power_of_2"
@@ -326,7 +354,7 @@ Finally, it displays a message indicating the completion of the backup process a
 
 Proceed by following the steps below:
 
-**Step 1**: On your terminal, create a file *backup.sh* using the command shown below:
+**Step 1**: On your terminal, create a file `backup.sh` using the command shown below:
 
 ```bash
 vi backup.sh
@@ -338,8 +366,14 @@ vi backup.sh
 #!/bin/bash
 
 # Define the source directory and backup directory
-source_dir="/path/to/source_directory"
-backup_dir="/path/to/backup_directory"
+
+# Define the source directory using your preferred directory
+#   source_dir="/path/to/source_directory"
+source_dir="/home/vagrant/shell-scripting/test"
+
+# Define the backup directory using your preferred directory
+#   backup_dir="/path/to/backup_directory"
+backup_dir="/home/vagrant/shell-scripting/backup"
 
 # Create a timestamp with the current date and time
 timestamp=$(date +"%Y%m%d%H%M%S")
@@ -347,11 +381,14 @@ timestamp=$(date +"%Y%m%d%H%M%S")
 # Create a backup directory with the timestamp
 backup_dir_with_timestamp="$backup_dir/backup_$timestamp"
 
+# Create the source directory
+mkdir -p "$source_dir"
+
 # Create the backup directory
 mkdir -p "$backup_dir_with_timestamp"
 
 # Copy all files from the source directory to the backup directory
-cp -r "$source_dir"/* "$backup_dir_with_timestamp"
+cp -r "$source_dir" "$backup_dir_with_timestamp"
 
 # Display a message indicating the backup process is complete
 echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
