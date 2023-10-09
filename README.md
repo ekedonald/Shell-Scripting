@@ -9,23 +9,54 @@ sudo chmod +x <filename>
 ```
 
 ## Shell Scripting Syntax Elements
-1. **Variables**: Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variables using the `=` operator and access their values using the variable name preceded bu a `$` sign. 
+## 1. **Variables**
+Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variables using the `=` operator and access their values using the variable name preceded bu a `$` sign. 
 
-* Assigning value to a variable.
+### Assigning value to a variable.
 
 ```bash
 name="John"
 ```
+![name=John](./images/1.%20name=John.png)
 
-* Retrieving value from a variable.
+### Retrieving value from a variable.
 
 ```bash
 echo $name
 ```
 
-2. **Control Flow**: Bash provides control flow statements like if-else, for loops, while loops and case statements to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists and execute different different commands based on conditions.
+![echo name](./images/1.%20echo%20name.png)
 
-* Using if-else to execute script based on a conditions.
+## 2. **Control Flow**
+Bash provides control flow statements like if-else, for loops, while loops and case statements to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists and execute different different commands based on conditions.
+
+### Using if-else to execute script.
+
+* Create a file named `control_flow.sh` using the command shown below:
+
+```bash
+touch control_flow.sh
+```
+
+![touch control flow](./images/1.%20touch%20control%20flow.png)
+
+* Give the file executable permissions in order to run the script using the command shown below:
+
+```bash
+sudo chmod +x control_flow.sh
+```
+
+![chmod control flow](./images/2.%20chmod%20control%20flow.png)
+
+* Use the command shown below to open the file for you to input data.
+
+```bash
+vi control_flow.sh
+```
+
+![control flow](./images/1.%20vi%20control%20flow.png)
+
+* Copy and paste the code shown below into the file.
 
 ```bash
 #!/bin/bash
@@ -43,9 +74,50 @@ else
 fi
 ```
 
-This piece of code prompts you to type a number and prints a statement stating the number is positive or negative.
+![control flow script](./images/2.%20control%20flow%20script.png)
 
-* Iterating through a list using a for loop.
+* Save and quit the file by using the `esc` key and typing `:wq!`
+
+*This piece of code prompts you to type a number and prints a statement stating the number is positive or negative.*
+
+* Run the script and enter a positive integer `2` in the prompt.
+
+![control flow positive](./images/2.%20:control%20flow%20positive.png)
+
+* Run the script and enter a negative interger `-2` in the prompt.
+
+![control flow negative](./images/2.%20:control%20flow%20negative.png)
+
+* Run the script and enter `0` in the prompt.
+
+![control flow zero](./images/2.%20:control%20flow%20negative.png)
+
+
+
+### Iterating through a list using a for loop.
+
+* Create a file named `test2.sh` using the command shown below:
+
+```bash
+touch test2.sh
+```
+
+![touch test2](./images/2.%20touch%20test2.png)
+
+* Give the file executable permissions by using the command shown below:
+
+```bash
+sudo chmod +x test2.sh
+```
+
+![chmod test2](./images/2.%20chmod%20test2.png)
+
+* Run the following command in order to open the script.
+
+```bash
+vi test2.sh
+```
+* Copy and paste the code shown below.
 
 ```bash
 #!/bin/bash
@@ -57,24 +129,53 @@ do
     echo $i
 done
 ```
+![test2 script](./images/2.%20test2%20script.png)
 
 The result is shown below:
 
-3. **Command Substitution**: Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitition.
+![test 2](./images/2.%20:test2.png)
 
-* Using backtick for command substitution.
+## 3. **Command Substitution**
+ Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitition.
+
+### Using backtick for command substitution.
+
+* Run the following command to declare the variable for *current_date*:
 
 ```bash
 current_date=`date +%Y-%m-%d`
 ```
 
-* Using `%()` syntax for command substitution.
+![current_date1](./images/3.%20current_date%20ydm.png)
+
+* Run the following command to display the variable stored:
+
+```bash
+echo $current_date
+```
+
+![echo current_date1](./images/3.%20echo%20current_date1.png)
+
+### Using `%()` syntax for command substitution.
+
+* Run the following command to declare the variable for *current_date*:
 
 ```bash
 current_date=$(date +%Y-%d-%m)
 ```
+![current_date2](./images/3.%20current_date%20ymd.png)
 
-4. **Input and Output**: Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. Additionally, you can redirect input and output using operators like `>` *(output to a file)*, `<` *(input from a file)* and `|` *(pipe the output of one command as input to another)*.
+* Run the following command to display the new variable stored.
+
+```bash
+echo $current_date
+```
+
+![echo current_date2](./images/3.%20echo%20current_date2.png)
+
+
+## 4. **Input and Output**
+ Bash provides various ways to handle input and output. You can use the read command to accept user input and output text to the console using the echo command. Additionally, you can redirect input and output using operators like `>` *(output to a file)*, `<` *(input from a file)* and `|` *(pipe the output of one command as input to another)*.
 
 * Accept user input.
 
@@ -83,11 +184,15 @@ echo "Enter your name:"
 read name
 ```
 
+![echo read name](./images/4.%20echo%20read%20name.png)
+
 * Output text to the terminal.
 
 ```bash
 echo "Hello World"
 ```
+
+![echo Hello World](./images/4.%20echo%20hello%20world.png)
 
 * Output the result of a command into a file.
 
@@ -95,11 +200,15 @@ echo "Hello World"
 echo "hello world" > index.txt
 ```
 
+![echo hello world > index.txt](./images/4.%20echo%20hello%20world%20>%20index_txt.png)
+
 * Pass the content of a file as input to a command.
 
 ```bash
 grep "hello" < index.txt
 ```
+
+![grep hello < index.txt](./images/4.%20grep%20hello%20<%20index_txt.png)
 
 * Pass the result of a command as input to another command.
 
@@ -107,7 +216,33 @@ grep "hello" < index.txt
 echo "hello world" | grep "world"
 ```
 
-5. **Functions**: Bash allows you to define and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
+![echo hello world | grep world](./images/4.%20echo%20hello%20world%20grep%20world.png)
+
+## 5. **Functions**
+Bash allows you to define and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
+
+* Create a file named `function.sh` using the following command:
+
+```bash
+touch function.sh
+```
+
+![touch function](./images/5.%20touch%20function.png)
+
+* Give the file executable permissions using the following command:
+
+```bash
+sudo chmod +x function.sh
+```
+
+![chmod function](./images/5.%20chmod%20function.png)
+
+* Run the following command to open the file.
+
+```bash
+vi function.sh
+```
+* Copy and paste the code below into the file.
 
 ```bash
 #!/bin/bash
@@ -121,26 +256,42 @@ greet() {
 greet "John"
 ```
 
+![function script](./images/5.%20function%20script.png)
+
+* Run the script using the command below:
+
+```bash
+./ function.sh
+```
+
+![function.sh](./images/5.%20:function.png)
+
 ## Writing Your First Shell Script
-**Step 1**: On your terminal, create and open a folder called *shell-scripting* using the commands shown below:
+**Step 1**: On your terminal, create and open a folder named `shell-scripting` using the commands shown below:
 
 ```bash
 mkdir shell-scripting
 ```
 
+![mkdir shell-scripting](./images/6.%20mkdir%20shell%20scripting.png)
+
 ```bash
 cd shell-scripting
 ```
 
-* This will hold all the script we will write in this lesson.
+![cd shell-scripting](./images/6.%20cd%20shell%20scripting.png)
 
-**Step 2**: Create a filed called `user-input.sh` using the command shown below:
+This will hold all the script we will write.
+
+**Step 2**: Create a filed named `user-input.sh` using the command shown below:
 
 ```bash
 touch user-input.sh
 ```
 
-**Step 3**: Inside the file copy and paste the block of code below.
+![touch user-input](./images/6.%20touch%20user-input.png)
+
+**Step 3**: Use the `vi user-input.sh` command to open the  file then copy and paste the block of code below:
 
 ```bash
 #!/bin/bash
@@ -153,26 +304,40 @@ read name
 echo "Hello, $name! Nice to meet you."
 ```
 
+![user-input script](./images/6.%20user-input%20script.png)
+
 A little bit about the code block. The script prompts for your name. When you type your name, it displays the text *hello! Nice to meet you*. Also `#!/bin/bash` helps you specify the type of bash interpreter used to execute the script.
 
-**Step 4**: Save your file using `shift zz` or `:wq!`.
+**Step 4**: Save your file using the `esc` key and `:wq!`.
 
-**Step 5**: Run the command `sudo chmod +x user-input.sh` this makes the file executable.
+**Step 5**: Run the command below to make the file executable.
 
-**Step 6**: Run the script using the command `./user-input.sh`
+```bash
+sudo chmod +x user-input.sh
+```
+
+![chmod user-input](./images/6.%20chmod%20user-input.png)
+
+**Step 6**: Run the script using the command shown below:
+
+ ```bash
+ ./user-input.sh
+ ```
+
+ ![user-input.sh](./images/6.%20:user-input.png)
 
 ## Directory Manipulation and Navigation
 We will be writing a simple shell script as a way of practicing what we learnt. This script will display the current directory, create a new directory called "*my_directory*", change to that directory, create two files inside it, list the files, move back one level up, remove the "*my_directory*" and its contents and finally list the files in the current directory again.
 
 Proceed by following the steps below:
 
-**Step 1**: Create and a file named *navigating-linux-filesystem.sh* using the following command:
+**Step 1**: Create and a file named `navigating-linux-filesystem.sh` using the following command:
 
 ```bash
 vi navigating-linux-filesystem.sh
 ```
 
-**Step 2**: Paste the code block below into your file.
+**Step 2**: Paste the code block below into the file.
 
 ```bash
 #!/bin/bash
@@ -215,10 +380,15 @@ echo "Files in the current directory:"
 ls
 ```
 
-**Step 3**: Run the command below to execute permission on the file. 
+![navigating linux filesystem script](./images/7.%20navigating%20linux%20filesystem%20script.png)
+
+**Step 3**: Run the command below to give executable permission on the file.
+
 ```bash
 sudo chmod +x navigating-linux-filesystem.sh
 ```
+
+![chmod navigating-linux-filesystem](./images/7.%20chmod%20navigating%20linux%20filesystem.png)
 
 **Step 4**: Run your script using the command below:
 
@@ -226,12 +396,14 @@ sudo chmod +x navigating-linux-filesystem.sh
 ./navigating-linux-filesystem.sh
 ```
 
+![navigating-linux-filesystem.sh](./images/7.%20:navigating%20linux%20filesystem.png)
+
 ## File Operations and Sorting
 Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This scripts creates three files *(file1.txt, file2.txt and file3.txt)*, displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the *sorted_files_sorted_alphabetically.txt* and finally displays the contents of the final sorted file.
 
 Lets proceed using the steps below:
 
-**Step 1**: Open your terminal and create a file called `sorting.sh` using the command shown below:
+**Step 1**: Open your terminal and create a file named `sorting.sh` using the command shown below:
 
 ```bash
 vi sorting.sh
@@ -277,29 +449,34 @@ echo "Final sorted file:"
 cat sorted_files_sorted_alphabetically.txt
 ```
 
+![sorting script](./images/8.%20sorting%20script.png)
+
 **Step 3**: Set execute permission on *sorting.sh* using the command shown below.
 
 ```bash
 sudo chmod +x sorting.sh
 ```
 
-**Step 4**: Run your script using the command below:
+![chmod sorting](./images/8.%20chmod%20sorting.png)
+
+**Step 4**: Run your script using the command shown below:
 
 ```bash
 ./sorting.sh
 ```
+![sorting](./images/8.%20:sorting.png)
 
 ## Working With Numbers and Calculations
 This script defines two variables *num1* and *num2* with numeric values, performs basic arithmetic operations *(addition, subtraction, multiplication, division and modulus)* and displays the results. It also performs more complex calculations such as raising *num1* to the power of 2 and calculating the square root of *num2* and displays those results as well.
 
 Lets proceed by following the steps below:
-**Step 1**: On your terminal, create a file called `calculations.sh` using the command below:
+**Step 1**: On your terminal, create a file named `calculations.sh` using the command below:
 
 ```bash
 vi calculations.sh
 ```
 
-**Step 2**: Copy and paste the code block below:
+**Step 2**: Copy and paste the code block below into the file:
 
 ```bash
 #!/bin/bash
@@ -333,17 +510,23 @@ echo "Number 1 raised to the power of 2: $power_of_2"
 echo "Square root of number 2: $square_root"
 ```
 
-**Step 3**: Set execute permission on *calculations.sh* using the command shown below;
+![claculations script](./images/9.%20calculations%20script.png)
+
+**Step 3**: Set execute permission on *calculations.sh* using the command shown below:
 
 ```bash
 sudo chmod +x calculations.sh
 ```
+
+![chmod calculations](./images/9.%20chmod%20calculations.png)
 
 **Step 4**: Run your script using this command:
 
 ```bash
 ./calculations.sh
 ```
+
+![calculations](./images/9.%20:calculations.png)
 
 ## File Backup and Timestamping
 As a DevOps Engineer backing up databases and other storage devices is one of the most common task you to carryout.
@@ -354,7 +537,7 @@ Finally, it displays a message indicating the completion of the backup process a
 
 Proceed by following the steps below:
 
-**Step 1**: On your terminal, create a file `backup.sh` using the command shown below:
+**Step 1**: On your terminal, create a file named `backup.sh` using the command shown below:
 
 ```bash
 vi backup.sh
@@ -394,14 +577,20 @@ cp -r "$source_dir" "$backup_dir_with_timestamp"
 echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 ```
 
+![backup script](./images/10.%20backup%20script.png)
+
 **Step 3**: Set execute permission on *backup.sh* using the command shown below:
 
 ```bash
 sudo chmod +x backup.sh
 ```
 
+![chmod backup](./images/10.%20chmod%20backup.png)
+
 **Step 4**: Run your script using the command shown below:
 
 ```bash
 ./backup.sh
 ```
+
+![backup.sh](./images/10.%20:backup.png)
