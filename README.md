@@ -84,7 +84,7 @@ fi
 
 ![control flow positive](./images/2.%20:control%20flow%20positive.png)
 
-* Run the script and enter a negative interger `-2` in the prompt.
+* Run the script and enter a negative integer `-2` in the prompt.
 
 ![control flow negative](./images/2.%20:control%20flow%20negative.png)
 
