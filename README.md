@@ -2,9 +2,9 @@
 ___
 Shell scripting is a way of automating and scripting tasks on a Unix or Unix-like operating system, such as Linux or macOS, using shell commands and scripting constructs. A shell script is a series of commands and instructions written in a plain text file, which can be executed by the system's shell interpreter. The shell interpreter reads and executes the commands in the script one by one, allowing you to automate repetitive tasks, perform system administration and more.
 
-For instance, when we want to clone a git repo, we type the command `git clone` and pass in the link to the repository. In less than no time we can see the repo downloaded into our local machine. Lets say you are given a task to clone 1000 repositories. Yes, you can type the `git clone` command 1000 times. That gets the job done. Someone with not so great patience may be unable to complete the task.
+For instance, when we want to clone a git repo, we type the command `git clone` and pass in the link to the repository. In less than no time we can see the repo downloaded into our local machine. Let's say you are given a task to clone 1000 repositories. Yes, you can type the `git clone` command 1000 times. That gets the job done. Someone with not-so-great patience may be unable to complete the task.
 
-This is where shell scripting comes in. Shell scripting helps you automate repititive task. We can simply write a script that does the job of cloning the 1000 repositories. We call it once and the job is done. We have the advantage of using it again whenever we are assigned the same task.
+This is where shell scripting comes in. Shell scripting helps you automate repetitive tasks. We can simply write a script that does the job of cloning the 1000 repositories. We call it once and the job is done. We have the advantage of using it again whenever we are assigned the same task.
 
 Note that for you to run a script, you have the give the file executable permissions using the command shown below:
 
@@ -32,9 +32,9 @@ echo $name
 ![echo name](./images/1.%20echo%20name.png)
 
 ## 2. Control Flow
-Bash provides control flow statements like if-else, for loops, while loops and case statements to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists and execute different different commands based on conditions.
+Bash provides control flow statements like if-else, for loops, while loops and case statements to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists and execute different commands based on conditions.
 
-### Using if-else to execute script.
+### Using if-else to execute a script.
 
 * Create a file named `control_flow.sh` using the command shown below:
 
@@ -82,7 +82,7 @@ fi
 
 * Save and quit the file by using the `esc` key and typing `:wq!`
 
-*This piece of code prompts you to type a number and prints a statement stating the number is positive or negative.*
+*This piece of code prompts you to type a number and prints a statement stating whether the number is positive or negative.*
 
 * Run the script and enter a positive integer `2` in the prompt.
 
@@ -140,7 +140,7 @@ The result is shown below:
 ![test 2](./images/2.%20:test2.png)
 
 ## 3. Command Substitution
- Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitition.
+ Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitution.
 
 ### Using backtick for command substitution
 
@@ -340,12 +340,12 @@ Run the script using the command shown below:
  ![user-input.sh](./images/6.%20:user-input.png)
 
 ## Directory Manipulation and Navigation
-We will be writing a simple shell script as a way of practicing what we learnt. This script will display the current directory, create a new directory called "*my_directory*", change to that directory, create two files inside it, list the files, move back one level up, remove the "*my_directory*" and its contents and finally list the files in the current directory again.
+We will be writing a simple shell script as a way of practicing what we learned. This script will display the current directory, create a new directory called "*my_directory*", change to that directory, create two files inside it, list the files, move back one level up, remove the "*my_directory*" and its contents and finally list the files in the current directory again.
 
 Proceed by following the steps below:
 
 ### Step 1
-Create and a file named `navigating-linux-filesystem.sh` using the following command:
+Create a file named `navigating-linux-filesystem.sh` using the following command:
 
 ```bash
 vi navigating-linux-filesystem.sh
@@ -416,9 +416,9 @@ Run your script using the command shown below:
 ![navigating-linux-filesystem.sh](./images/7.%20:navigating%20linux%20filesystem.png)
 
 ## File Operations and Sorting
-Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This scripts creates three files *(file1.txt, file2.txt and file3.txt)*, displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the *sorted_files_sorted_alphabetically.txt* and finally displays the contents of the final sorted file.
+Here, we will be writing a simple shell that focuses on *File Operations and Sorting*. This script creates three files *(file1.txt, file2.txt and file3.txt)*, displays the files in their current order, sorts them alphabetically, saves the sorted files.txt, displays the sorted files, removes the original files, renames the *sorted_files_sorted_alphabetically.txt* and finally displays the contents of the final sorted file.
 
-Lets proceed using the steps below:
+Let's proceed using the steps below:
 
 ### Step 1
 Open your terminal and create a file named `sorting.sh` using the command shown below:
@@ -490,7 +490,8 @@ Run the script using the command shown below:
 ## Working With Numbers and Calculations
 This script defines two variables *num1* and *num2* with numeric values, performs basic arithmetic operations *(addition, subtraction, multiplication, division and modulus)* and displays the results. It also performs more complex calculations such as raising *num1* to the power of 2 and calculating the square root of *num2* and displays those results as well.
 
-Lets proceed by following the steps below:
+Let's proceed by following the steps below:
+
 ### Step 1
 On your terminal, create a file named `calculations.sh` using the command below:
 
@@ -554,7 +555,7 @@ Run the script using the command shown below:
 ![calculations](./images/9.%20:calculations.png)
 
 ## File Backup and Timestamping
-As a DevOps Engineer backing up databases and other storage devices is one of the most common task you to carryout.
+As a DevOps Engineer backing up databases and other storage devices is one of the most common tasks you can carry out.
 
 This script defines the source directory paths. It then creates a timestamp using the current date and time, and creates a backup directory using the `cp` command with the `-r` option for recursive copying. 
 
