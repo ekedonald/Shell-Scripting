@@ -2,6 +2,10 @@
 ___
 Shell scripting is a way of automating and scripting tasks on a Unix or Unix-like operating system, such as Linux or macOS, using shell commands and scripting constructs. A shell script is a series of commands and instructions written in a plain text file, which can be executed by the system's shell interpreter. The shell interpreter reads and executes the commands in the script one by one, allowing you to automate repetitive tasks, perform system administration and more.
 
+For instance, when we want to clone a git repo, we type the command `git clone` and pass in the link to the repository. In less than no time we can see the repo downloaded into our local machine. Lets say you are given a task to clone 1000 repositories. Yes, you can type the `git clone` command 1000 times. That gets the job done. Someone with not so great patience may be unable to complete the task.
+
+This is where shell scripting comes in. Shell scripting helps you automate repititive task. We can simply write a script that does the job of cloning the 1000 repositories. We call it once and the job is done. We have the advantage of using it again whenever we are assigned the same task.
+
 Note that for you to run a script, you have the give the file executable permissions using the command shown below:
 
 ```bash
